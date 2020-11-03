@@ -3,10 +3,10 @@ const assert = require('chai').assert;
 
 
 describe("#tail", () => {
-  it("returns ahil for sahil", () => {
-    assert.strictEqual(tail("sahil"),"ahil");
+  it("returns [sharma] for [sahil, sharma]", () => {
+    assert.deepEqual(tail(["sahil","sharma"]),["sharma"]);
   });
-  it("returns ello for hello", () => {
-    assert.strictEqual(tail("hello"), "ello" ); 
+  it("returns [sahil,sharma] for [hello,sahil,sharma]", () => {
+    assert.deepEqual(tail(["hello","sahil","sharma"]), ["sahil","sharma"] ); 
   });
 });
